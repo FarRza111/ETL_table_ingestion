@@ -3,7 +3,7 @@ import pandas as pd
 
 class Converter:
 
-  USER = "Z008374"
+  USER = "Fariz Rzayev"
   
 
   def __init__(self, data):
