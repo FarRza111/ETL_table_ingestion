@@ -7,6 +7,28 @@ import pandas as pd
 import pandas as pd
 import re
 
+
+
+
+business_suffixes = [
+    "LLC", "Inc.", "Corp.", "Ltd.", "AG", "GmbH", "S.A.", "Pty Ltd.", "S.p.A.", "B.V.", "N.V.", "Co.",
+    "LP", "LLP", "PC", "SARL", "SNC", "Ltd. Şti.", "Ltd. Sti.", "Kft.", "Zrt.", "P.L.C.", "PLLC", "CIC",
+    "SpA", "Ltda.", "Lda.", "Bhd", "AS", "AB", "ApS", "Oy", "Oyj", "a.s.", "s.r.o.", "d.o.o.", "a.d.",
+    "OÜ", "SIA", "UAB", "Sarl", "SARL", "GmbH", "PLC", "CC", "NV", "SCA", "EEIG", "ULC", "SAOC", "WLL",
+    "KSC", "PrJSC", "PJSC", "JSC", "Ltda", "SP", "NPO",
+    "A/S", "S.A.S.", "S.R.L.", "S.A.C.", "EURL", "S.R.L.", "S.L.", "S.A.", "K.K.", "S.R.L.", "S.A.S.",
+    "S.A.", "G.K.", "K.K.", "S.A.C.V.", "S.A.", "OÜ", "S.A.S.", "S.A.", "Ltda.", "S.A.", "S.A."
+]
+
+# Escape special regex characters in suffixes and join them into a pattern
+escaped_suffixes = [re.escape(suffix) for suffix in business_suffixes]
+pattern = r'\b(?:' + '|'.join(escaped_suffixes) + r')\b'
+
+print(pattern)
+
+
+
+
 def classify_entity(suffix):
     # Define regular expressions for business and financial entities
     business_pattern = re.compile(r'\b(?:Limited Partnership|Limited Liability Partnership|LLP|LLC|Ltd|Ltd\.|LTDA\.|S\.R\.L|S\.A\.|S\.A\.S|N\.V|B\.V|BVBA|S\.C\.A|S\.E|Corporation|Corp\.|Inc|Incorporated|A\.G|AG|GmbH|Co-op|Co-operative|Association|ASBL|Société|Coop|SPRL|VZW|Société à Responsabilité Limitée|Société en Commandite)\b', re.IGNORECASE)
@@ -33,6 +55,8 @@ df['entity_type'] = df['suffixes'].apply(classify_entity)
 
 # Display the DataFrame
 print(df)
+
+
 
 
 
@@ -71,6 +95,12 @@ def is_individual(name):
 
     # Default to individual if no business suffix is found
     return True
+
+
+
+
+
+
 
 
 
