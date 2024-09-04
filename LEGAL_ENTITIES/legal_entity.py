@@ -3,6 +3,42 @@ import re
 import pandas as pd
 
 
+
+import pandas as pd
+import re
+
+def classify_entity(suffix):
+    # Define regular expressions for business and financial entities
+    business_pattern = re.compile(r'\b(?:Limited Partnership|Limited Liability Partnership|LLP|LLC|Ltd|Ltd\.|LTDA\.|S\.R\.L|S\.A\.|S\.A\.S|N\.V|B\.V|BVBA|S\.C\.A|S\.E|Corporation|Corp\.|Inc|Incorporated|A\.G|AG|GmbH|Co-op|Co-operative|Association|ASBL|Société|Coop|SPRL|VZW|Société à Responsabilité Limitée|Société en Commandite)\b', re.IGNORECASE)
+
+    financial_pattern = re.compile(r'\b(?:Trust Co\.|Trust Company|Trust Corp\.|Trust Corporation|Trustee Company|Fund\.|FONDPRIV|GIE|GEIE|Bank|Loan|Investment|Financial|Asset|Société de Fiducie|Compagnie de Fiducie|Société de Prêt)\b', re.IGNORECASE)
+
+    # Check which pattern matches
+    if business_pattern.search(suffix):
+        return 'Business Entity'
+    elif financial_pattern.search(suffix):
+        return 'Financial Institution'
+    else:
+        return 'Unknown'
+
+# Sample DataFrame
+data = {
+    'suffixes': ['Ltd', 'LLC', 'N.V.', 'S.A.S', 'Trust Co.', 'Fund.', 'FONDPRIV', 'Bank', 'SPRL', 'GmbH']
+}
+
+df = pd.DataFrame(data)
+
+# Apply the classification function to the 'suffixes' column
+df['entity_type'] = df['suffixes'].apply(classify_entity)
+
+# Display the DataFrame
+print(df)
+
+
+
+
+
+
 def match_patterns(df, column, patterns):
     """
     This function matches a list of patterns against a DataFrame column.
