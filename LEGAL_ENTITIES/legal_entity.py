@@ -38,6 +38,47 @@ print(df)
 
 
 
+# Define the function to determine if a substring is an individual
+def is_individual(name):
+    # Common patterns to identify individuals
+    individual_patterns = [
+        r'\b[A-Z][a-z]+\s[A-Z][a-z]+\b',  # e.g., John Smith
+        r'\b[A-Z][a-z]*\s[A-Z]\.\s?[A-Z][a-z]+\b',  # e.g., John M. Smith
+        r'\b(Mr|Mrs|Ms|Dr|Prof|Sir)\.\s?[A-Z][a-z]+\s[A-Z][a-z]+\b',  # e.g., Dr. Jane Doe
+        r'\b[A-Z][a-z]+\s[A-Z][a-z]+-[A-Z][a-z]+\b',  # e.g., Mary-Jane Watson
+        r'\b[A-Z][a-z]+\s(?:Al|Bin|Ibn)\s[A-Z][a-z]+\b',  # e.g., Osama Bin Laden
+        r'\b[A-Z][a-z]+\b',  # Single names (possible but less reliable, e.g., "Cher")
+    ]
+    
+    # Common patterns to identify business entities
+    business_suffixes = [
+        "LLC", "Inc.", "Corp.", "Ltd.", "AG", "GmbH", "S.A.", "Pty Ltd.", "S.p.A.", "B.V.", "N.V.", "Co.",
+        "LP", "LLP", "PC", "SARL", "SNC", "Ltd. Şti.", "Ltd. Sti.", "Kft.", "Zrt.", "P.L.C.", "PLLC", "CIC",
+        "SpA", "Ltda.", "Lda.", "Bhd", "AS", "AB", "ApS", "Oy", "Oyj", "a.s.", "s.r.o.", "d.o.o.", "a.d.",
+        "OÜ", "SIA", "UAB", "Sarl", "SARL", "GmbH", "PLC", "CC", "NV", "SCA", "EEIG", "ULC", "SAOC", "WLL",
+        "KSC", "PrJSC", "PJSC", "JSC", "Ltda", "SP", "NPO"
+    ]
+
+    # Check if the name matches any individual patterns
+    for pattern in individual_patterns:
+        if re.search(pattern, name):
+            return True  # Likely an individual
+
+    # Check if the name contains any business suffixes
+    for suffix in business_suffixes:
+        if suffix in name:
+            return False  # Likely a business entity
+
+    # Default to individual if no business suffix is found
+    return True
+
+
+
+
+
+
+
+
 
 def match_patterns(df, column, patterns):
     """
