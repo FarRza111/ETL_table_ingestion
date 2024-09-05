@@ -42,3 +42,82 @@ Financial Institutions: Dedicated financial portals, specialized sections on sto
 Individuals: Generally, personal activities or professions are listed.
 Legal Entities: Descriptions often involve goods/services, market segments, business goals.
 Financial Institutions: Descriptions include financial services offered, target markets, investment strategies.
+
+
+
+
+
+
+### Individuals
+Common Address Keywords:
+"Apt" (Apartment)
+"Unit"
+"Flat"
+"Floor" (e.g., "1st Floor", "Top Floor")
+"Room"
+"House No."
+"PO Box" (used by individuals for personal mail)
+Residential streets (e.g., "Elm Street", "Maple Avenue")
+Address Characteristics:
+Often located in residential areas.
+Typically, no business-related keywords.
+May include the name of gated communities or residential complexes.
+Examples:
+"123 Elm Street, Apt 4B"
+"456 Maple Avenue, Floor 2, Room 3"
+"PO Box 123, Springfield"
+2. Legal Entities
+Common Address Keywords:
+"Suite"
+"Office"
+"Building" (e.g., "Tech Building", "Corporate Tower")
+"Business Park" (e.g., "Tech Park", "Commerce Park")
+"Plaza" (e.g., "Commerce Plaza", "Business Plaza")
+"Industrial Estate"
+"Complex" (e.g., "Corporate Complex", "Business Complex")
+"Block"
+"Corporate Center" (e.g., "City Corporate Center")
+"Headquarters"
+Address Characteristics:
+Typically located in commercial areas or business districts.
+Addresses often feature office numbers, floors, or suites.
+May include the names of business parks, plazas, or towers.
+Could indicate corporate locations like headquarters or regional offices.
+Examples:
+"Suite 500, Business Plaza, 789 Corporate Drive"
+"Office 12, Tech Park, 321 Innovation Way"
+"4th Floor, Corporate Tower, 123 Main Street"
+3. Financial Institutions
+Common Address Keywords:
+"Branch" (e.g., "City Bank Branch", "Main Branch")
+"Banking Center"
+"Financial Center"
+"Head Office"
+"Investment House"
+"Tower" (often for major bank buildings, e.g., "Bank Tower")
+"Plaza" (e.g., "Finance Plaza")
+"Arcade" (e.g., "Bank Arcade")
+"Stock Exchange Building" (e.g., "NYSE Building")
+"Trust Building"
+Address Characteristics:
+Usually found in financial districts or major commercial hubs.
+Addresses often highlight "branch" or "center" to indicate customer-facing locations.
+May include addresses within significant financial or corporate buildings.
+Could specify particular financial zones or districts known for banking and finance.
+Examples:
+"Main Branch, 123 Finance Street"
+"Investment House, 456 Wealth Avenue, 2nd Floor"
+"Financial Center, 789 Trust Plaza"
+4. Mixed-Use Address Indicators
+Some addresses may have keywords that can be associated with both legal entities and financial institutions, like "Tower", "Plaza", or "Complex". In such cases, context and additional information (like the presence of other business or financial terms) can help clarify the nature of the entity.
+5. Special Address Features
+Postcodes and ZIP Codes:
+Certain postcodes may be known for residential, commercial, or financial purposes (e.g., specific ZIP codes in major cities like New York, London, Tokyo).
+Geographical Indicators:
+Proximity to known business districts (e.g., Wall Street for finance, Silicon Valley for tech companies).
+
+
+
+
+
+
