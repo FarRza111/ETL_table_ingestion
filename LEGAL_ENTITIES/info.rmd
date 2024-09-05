@@ -1,0 +1,44 @@
+1. Suffixes and Prefixes
+Individuals: Usually do not have specific suffixes or prefixes. Sometimes titles like "Mr.", "Ms.", "Dr." might be present, but these are not unique identifiers.
+Legal Entities: As detailed before, use suffixes like "Ltd.", "Inc.", "LLC", "S.A.", "GmbH", etc.
+Financial Institutions: Suffixes like "Bank", "Trust", "Credit Union", "Insurance Co.", "Savings & Loan" are specific to financial institutions.
+2. Naming Conventions
+Individuals: Names often follow common personal naming conventions (first name, last name, middle name, initials).
+Legal Entities: Company names often include terms related to their business or structure, like "Group", "Holdings", "Enterprises", "Industries".
+Financial Institutions: Names often include financial terms like "Bank", "Capital", "Finance", "Investment", "Trust", "Insurance".
+3. Legal Identifiers
+Individuals: Social Security Numbers (SSNs), National Identification Numbers, Passport Numbers.
+Legal Entities: Business registration numbers, Employer Identification Numbers (EINs), VAT numbers.
+Financial Institutions: SWIFT/BIC codes, bank routing numbers, financial regulatory body registrations.
+4. Entity Types in Registration Data
+Individuals: Generally registered as persons without specific entity codes.
+Legal Entities: Registered with codes like LLC, LLP, Corporation, Partnership in government or business registries.
+Financial Institutions: Often have special designations in financial regulators’ databases, like banks, investment firms, or insurance companies.
+5. Domain and Email Address Analysis
+Individuals: Personal emails often come from free providers like Gmail, Yahoo, Hotmail.
+Legal Entities: Company domains are custom and often include the company’s name (e.g., @companyname.com).
+Financial Institutions: Domains often include terms like "bank", "finance", "invest", reflecting their industry (e.g., @bankname.com).
+6. Types of Documents
+Individuals: Passport, Driver's License, Birth Certificate.
+Legal Entities: Articles of Incorporation, Business Licenses, Tax Returns.
+Financial Institutions: Banking Licenses, Regulatory Approvals, Audited Financial Statements.
+7. Operational Descriptions and Industry Codes
+Individuals: Typically none.
+Legal Entities: NAICS or SIC codes that categorize their industry (e.g., Manufacturing, Retail, Technology).
+Financial Institutions: Often classified under specific financial industry codes (e.g., NAICS code for banking or insurance).
+8. Address Types
+Individuals: Residential addresses, often not located in commercial areas.
+Legal Entities: Registered business addresses, usually in commercial zones or office buildings.
+Financial Institutions: Branch addresses, often in prime commercial locations, frequently have multiple locations.
+9. Associated Keywords and Terms
+Individuals: Common personal names without business or financial terms.
+Legal Entities: Keywords like "Services", "Solutions", "Holdings", "International".
+Financial Institutions: Keywords like "Bank", "Fund", "Capital", "Insurance", "Credit".
+10. Online Presence and Descriptions
+Individuals: Personal social media profiles, personal websites/blogs.
+Legal Entities: Corporate websites, LinkedIn company pages, industry-specific portals.
+Financial Institutions: Dedicated financial portals, specialized sections on stock exchanges, financial news sections.
+11. Business Activity Descriptions
+Individuals: Generally, personal activities or professions are listed.
+Legal Entities: Descriptions often involve goods/services, market segments, business goals.
+Financial Institutions: Descriptions include financial services offered, target markets, investment strategies.
