@@ -1,3 +1,7 @@
+import pandas as pd
+import re
+
+# The list of company types provided
 company_types = [
     'A Limited Partnership', 'A.C.', 'A.G.', 'A.V.V.', 'AG', 'AGes.', 'AGmsZ', 'AISBL', 'ASBL', 'ASBL DPU', 'ASC',
     'AVV', 'An Incorporated Limited_x000D_Partnership', 'Assoc.', 'Association', 'B.V.', 'BO', 'BV', 'BV BVBA', 
@@ -40,5 +44,19 @@ company_types = [
     'ЕТ', 'ЗАО', 'ЗАТ', 'КД', 'КДА', 'ОАО', 'ОДО', 'ООО', 'С-ИЕ', 'С-ие', 'СД', 'ТАА', 'ТДА', 'УП', 'ذ.م.م'
 ]
 
+# Create a regex pattern string by joining all company types with pipe "|"
+pattern = r'(' + '|'.join([re.escape(ct) for ct in company_types]) + r')'
 
+# Compile the pattern with IGNORECASE flag for case-insensitive matching
+compiled_pattern = re.compile(pattern, re.IGNORECASE)
 
+# Sample DataFrame
+data = {'company_type': ['Ltd', 'B.V.', 'XYZ Corp.', 'Inc.', 'Cooperative Ltd.', 'n.v.', 'ÖrVohGza', 'j.t.d.', 'limited partnership']}
+df = pd.DataFrame(data)
+
+# Apply the regex pattern to match company types
+df['matches'] = df['company_type'].apply(lambda x: bool(compiled_pattern.fullmatch(x)))
+
+# print(df)
+
+df
