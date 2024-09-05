@@ -60,3 +60,68 @@ df['matches'] = df['company_type'].apply(lambda x: bool(compiled_pattern.fullmat
 # print(df)
 
 df
+
+
+
+
+
+import re
+import pandas as pd
+
+# Lists of suffixes for business entities and financial institutions
+business_suffixes = ['Ltd', 'Ltd.', 'Limited', 'LLC', 'Inc', 'Inc.', 'Corporation', 'Corp', 'Corp.', 'GmbH', 'S.A.', 'N.V.', 'B.V.']
+financial_suffixes = ['Bank', 'Trust', 'Credit Union', 'Savings', 'Insurance', 'Investment', 'Capital']
+
+# Compile regex patterns for suffixes
+business_pattern = re.compile(r'\b(' + '|'.join(re.escape(suffix) for suffix in business_suffixes) + r')\b', re.IGNORECASE)
+financial_pattern = re.compile(r'\b(' + '|'.join(re.escape(suffix) for suffix in financial_suffixes) + r')\b', re.IGNORECASE)
+
+def classify_customer(ordering_customer_detail):
+    """
+    Classifies customers as Individual, Financial Institution, or Business Entity.
+    
+    Args:
+        ordering_customer_detail (str): The ordering customer detail string.
+        
+    Returns:
+        str: Classification as 'Individual', 'Financial', or 'Business Entity'.
+    """
+    # Check for Financial Institutions
+    if financial_pattern.search(ordering_customer_detail):
+        return 'Financial'
+    
+    # Check for Business Entities
+    if business_pattern.search(ordering_customer_detail):
+        return 'Business Entity'
+    
+    # Default to Individual if no matches found
+    return 'Individual'
+
+# Example DataFrame of ordering customer details
+data = {
+    'orderingCustomerDetail': [
+        'John Doe', 
+        'Acme Corp.', 
+        'First National Bank', 
+        'Jane Smith', 
+        'Global Holdings Ltd.', 
+        'Investment Trust Co.'
+    ]
+}
+df = pd.DataFrame(data)
+
+# Apply classification
+df['CustomerType'] = df['orderingCustomerDetail'].apply(classify_customer)
+
+# import ace_tools as tools; tools.display_dataframe_to_user(name="Customer Segmentation", dataframe=df)
+df
+
+
+
+
+
+
+
+
+
+
